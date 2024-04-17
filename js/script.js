@@ -3,7 +3,7 @@ let variableDos = 25;
 let variableTres = `25`; /*Los strings siempre van en comillas simples o dobles*/
 let variableCuatro =  35;
 
-suma=variableUno+variableDos;
+suma=variableUno*variableDos;
 resta=variableUno-variableDos;
 
 // console.log('el resultado de la operacion es: '+resta)
