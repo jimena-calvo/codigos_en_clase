@@ -11,6 +11,9 @@ const resta = (a,b)=>{
     return a-b
 
 }
+function saludar(){
+    cibsike.log('No usar esta funcion');
+}
  resultado = resta(33,66);
  console.log(resultado)
 
