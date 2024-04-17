@@ -1,0 +1,107 @@
+<!-- Hacer una pagina que reciba el rango de años (inicio y fin) y devuelva la lista de libros-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            background-color: rgb(240, 252, 240);
+
+        }
+
+        .fieldset{
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .fieldset .legend{
+            font-size: 1.5em;
+        }
+
+        #listaLibros{
+            width: 50%;
+            margin-left: 25%;
+            display: flex;
+            justify-content: center;
+
+        }
+        
+        #listaLibros #libros{
+            width: 50%;
+        }
+
+        .row{
+            margin: 5px;
+            font-size: 1em;
+        }
+        .row input{
+            border: solid 1px rgb(153, 192, 153);
+            border-radius: 5px;
+            padding: 3px;
+        }
+        .row input:hover{
+            background-color:rgb(224, 247, 224);
+        }
+        .row input:active{
+            border: none;
+            background-color: rgb(153, 192, 153);;
+        }
+
+        #botonEnviar{
+            padding: 5px 10px 5px;
+            font-size: 1em;
+            border: 1px solid rgb(121, 158, 121);
+            border-radius: 5px;
+            background-color: rgb(153, 192, 153);
+        }
+
+        #botonEnviar:hover{
+            background-color: rgb(131, 170, 131);
+            color: white;
+            cursor: pointer;
+        }
+        #botonEnviar:active{
+            background-color: rgb(153, 192, 153);
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Consulta Biblioteca Virtual</h1>
+
+    <fieldset class="fieldset">
+        <legend class="legend"><strong>Buscar libros por rango de años</strong></legend>
+
+        <form id="form">
+
+            <div class="row">
+                <label for="inicio">Ingrese el año de publicacion en que inicia el rango (incluyente): </label>
+                <input type="text" id="inicio" required>
+            </div>
+
+            <div class="row">
+                <label for="fin">Ingrese el año de publicacion en que finaliza el rango (incluyente): </label>
+                <input type="text" id="fin" required>
+
+            </div>
+            
+            <br>
+            <button type="submit" id="botonEnviar">Enviar el Rango</button>
+
+        </form>
+
+        <div id="listaLibros">
+            <p></p>
+            <ol id="libros">
+            </ol>
+        </div>
+    </fieldset>
+    <script src="/formBiblioteca.js"></script>
+    <script src="/biblioteca.js"></script>
+</body>
+</html>

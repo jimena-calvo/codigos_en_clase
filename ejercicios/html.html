@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #libros th{
+            border: 1px solid black;
+        }
+        #libros tr{
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Consulta Biblioteca Virtual</h1>
+    <h2 id="subtitulo">Buscar libros por rango de años</h2>
+    <form id="form">
+
+        <label for="inicio">Ingrese el año de publicacion en que inicia el rango(inclusivo)</label>
+        <input type="text" id="inicio" required>
+
+        <br>
+
+        <label for="fin">Ingrese el año de publicacion en que finaliza el rango(inclusivo)</label>
+        <input type="text" id="fin" required>
+
+        <br><br>
+
+        <button type="submit" id="botonEnviar">Enviar el Rango</button>
+    </form>
+
+    <div id="listaLibros">
+        <table id="libros">
+            <tr>
+                <th>Nombre</th>
+                <th>Autor</th>
+                <th>Año de publicación</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src="/ejercicios/BD.js"></script>
+    <script src="/ejercicios/form.js"></script>
+</body>
+</html> 
